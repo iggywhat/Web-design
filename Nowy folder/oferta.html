@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pl-PL">
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <link rel="icon" type="image/png" href="kamex.png">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="Strona głowna projektu na zaliczenie">
+    
+	
+<link href='http://fonts.googleapis.com/css?family=Ballet&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+
+    $(document).ready(function() {
+    
+    
+        //Walidacja tematu
+        $('#topic').on('blur', function() {
+            var input = $(this);
+            var name_length = input.val().length;
+            if(name_length >= 5 && name_length <= 250){
+                input.removeClass("invalid").addClass("valid");
+                input.next('.komunikat').text("Wprowadzono poprawną nazwę.").removeClass("blad").addClass("ok");
+            }
+            else{
+                input.removeClass("valid").addClass("invalid");
+                input.next('.komunikat').text("Temat musi mieć więcej niż 4 i mniej niż 250 znaków!").removeClass("ok").addClass("blad");
+                
+            }
+        });
+        
+        //Walidacja nazwy
+        $('#name').on('blur', function() {
+            var input = $(this);
+            var name_length = input.val().length;
+            if(name_length >= 5 && name_length <= 15){
+                input.removeClass("invalid").addClass("valid");
+                input.next('.komunikat').text("Wprowadzono poprawną nazwę.").removeClass("blad").addClass("ok");
+            }
+            else{
+                input.removeClass("valid").addClass("invalid");
+                input.next('.komunikat').text("Nazwa musi mieć więcej niż 4 i mniej niż 16 znaków!").removeClass("ok").addClass("blad");
+                
+            }
+        });
+            
+        //Walidacja email
+        $('#email').on('blur', function() {
+            var input = $(this);
+            var pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            var is_email = pattern.test(input.val());
+            if(is_email){
+                input.removeClass("invalid").addClass("valid");
+                input.next('.komunikat').text("Wprowadzono poprawny email.").removeClass("blad").addClass("ok");
+            }
+            else{
+                input.removeClass("valid").addClass("invalid");
+                input.next('.komunikat').text("Wprowadź poprawny email!").removeClass("ok").addClass("blad");
+            }
+        });	
+        
+        //Walidacja wiadomości
+        $('#message').on('blur', function() {
+            var input = $(this);
+            var message = $(this).val();
+            if(message){
+                input.removeClass("invalid").addClass("valid");
+                input.next('.komunikat').text("Wprowadzono poprawną wiadomość.").removeClass("blad").addClass("ok");
+            }
+            else{
+                input.removeClass("valid").addClass("invalid");
+                input.next('.komunikat').text("Wiadomość nie może być pusta!").removeClass("ok").addClass("blad");
+            }   
+        });
+        
+        //Po próbie wysłania formularza
+            $('#submit button').click(function(event){
+                var name = $('#name');
+                var email = $('#email');
+                var message = $('#message');
+                
+                if(name.hasClass('valid') && email.hasClass('valid') && message.hasClass('valid')){
+                    alert("Pomyślnie wysłano formularz.");	
+                }
+                else {
+                    event.preventDefault();
+                    alert("Uzupełnij wszystkie pola!");	
+                }
+            });
+    });
+
+</script> 
+	<title>Kamex Firma Budowlana</title>
+    </head>
+	
+    <body>
+
+        <header>
+            <div class="wrapper">
+                <div class="margines">
+                    <a href="index.html" class="logo">
+                        <img src="kamex.png" alt="logo firmy">
+                    </a>
+                    <nav>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="oNas.html">O nas</a></li>
+                        <li><a href="oferta.html">Oferta</a></li>
+                        <li><a href="kursySzkolenia.html">Kursy i szkolenia</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                    </nav>
+                    </div>
+                </div>
+        </header>
+        
+        <main>
+            <article class="podstrona">
+                <div class="margines">
+                <h1>Oferta</h1>
+Oto nasze statystyki
+             </div>
+            </article>
+        </main>
+        <table class="darkTable">
+            <thead>
+            <tr>
+            <th colspan="2">2004-rok założenia</th>
+            <th>2005-10</th>
+            <th>2010-13</th>
+            <th>2013-16</th>
+            <th>2016-18</th>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            <th>2023</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+            <td colspan="2">Zbudowane nieruchomości</td>
+            <td>10</td>
+            <td>42</td>
+            <td>124</td>
+            <td>262</td>
+            <td>488</td>
+            <td>692</td>
+            <td>805</td>
+            <td>966</td>
+            <td>1115</td>
+            </tr>
+            <tr>
+            <td colspan="2">Il Krajów objętych programem ochrony środowiska</td>
+            <td>1</td>
+            <td>3</td>
+            <td>6</td>
+            <td>12</td>
+            <td>14</td>
+            <td>15</td>
+            <td>19</td>
+            <td>23</td>
+            <td>28</td>
+            </tr>
+            <tr>
+            <td rowspan="2">/ilość siedzib</td>
+            <td colspan="10">Zatrudniony personel</td>
+            </tr>
+            <tr>
+            <td>5/1</td>
+            <td>20/1</td>
+            <td>63/1</td>
+            <td>92/2</td>
+            <td>132/2</td>
+            <td>181/3</td>
+            <td>223/3</td>
+            <td>365/4</td>
+            <td>491/4</td>
+            <td>612/5</td>
+            </tr>
+            </tbody>
+            </tr>
+            </table>
+            <svg width="100%" height="200">
+                <path
+                  d="M0 100 Q 140 150, 100 110 T 200 100 T 300 130 T 400 120 T 500 160 T 600 170 T 700 110 T 800 120 T 900 100 T 1000 100 T 1100 100 T 1200 100 T 1300 100 T 1400 100T 1500 100T 1600 100"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="6"
+                />
+            
+              </svg>
+        <section id="footer">
+            <div class="margines">
+            <div id="left">
+                <a href="kontakt.html" class="logo">
+                    <img id="logo" src="kamex.png" alt="logo firmy">
+                </a>
+                <div id="adres">
+                    <p> ul. Budowlana 123<br>
+                        00-000 Warszawa<br>
+                         PL Telefon: +48 123123123<br>
+                          E-mail: info@kamex.com
+                    </p>
+                </div>
+            </div>
+            <div id="right">
+                <div id="form">
+                    <form id="formularz" method="post" action="">
+        
+                        <div>
+                            <label for="topic">Temat:</label>
+                            <input type="text" id="topic" name="topic"></input>
+                            <span class="komunikat"></span>
+                        </div>
+                    
+                        <div>
+                            <label for="name">Nazwa:</label>
+                            <input type="text" id="name" name="name"></input>
+                            <span class="komunikat"></span>
+                        </div>
+                       
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email"></input>
+                            <span class="komunikat"></span>          
+                        </div>                        
+                        
+                        <div>
+                            <label for="message">Wiadomość:</label>
+                            <textarea id="message" name="message"></textarea>
+                            <span class="komunikat"></span>                                               
+                        </div>                    
+                       
+                        <div id="submit">             
+                            <button type="submit">Wyślij</button>
+                        </div>
+                
+                </form>
+                </div>
+            </div>
+            </div>
+        </section>
+        <footer>
+            <span>Copyright Igor Kamski 2024</span>
+        </footer>
+    
+    </body>
+</html>

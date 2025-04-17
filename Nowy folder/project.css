@@ -1,0 +1,480 @@
+body{
+    background-color: rgb(116, 116, 117);
+    color:rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+/* nagłowek */
+
+.wrapper{
+    background-color: rgb(58, 57, 56);
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    display:block;
+    position: fixed;
+    top:0;
+    z-index: 30;
+}
+@media all and (max-width:1050px){
+    .wrapper{
+        width: 70%;
+        height: 250px;
+        right: 0;
+        overflow: hidden;
+        margin-bottom: 60px;
+        border-radius: 50%;
+    }
+}
+.logo{
+    display: block;
+    float:left;
+}
+
+.logo img {
+    width:160px;
+   aspect-ratio: 2/1;
+}
+@media all and (max-width:1050px){
+    .logo img{
+        border-radius: 50%;
+    }
+}
+#logo{
+border: 1px solid grey;
+width: 160px;
+aspect-ratio: 1/1;
+border-radius: 50%;
+}
+nav{
+    display:block;
+    float:right;
+    padding-top:7px;
+}
+@media all and (max-width:1050px){
+    .nav{
+        float: left;
+        z-index: 100;
+    }
+}
+header nav ul{
+    list-style: none;
+ margin: 0;
+ padding: 0;
+
+}
+header nav ul li{
+    display: block;
+    float: left;
+    margin: 0 10px 0 10px;
+
+}
+@media all and (max-width:1050px){
+    header nav ul li{
+        float: right;
+        z-index: 100;
+    }
+}
+header nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    opacity: 1;
+   transition: ease-in-out 0.3s;
+   display: block;
+    padding: 20px;
+    border-radius: 15px;
+}
+@media all and (max-width:1050px){
+    header nav ul li a{
+        float: right;
+        z-index: 100;
+        width: 30px;
+        aspect-ratio: 2/1;
+        overflow: hidden;
+        font-size: smaller;
+    }
+}
+header nav ul li a:hover{
+    opacity: 0.5;
+    transition: ease-in-out 0.3s;
+    background-color: rgb(210, 210, 210);
+}
+header nav ul li a:active{
+background-color: rgb(73, 73, 73);
+}
+#zajawka{
+    margin-top: 80px;
+    background-color: rgb(48, 44, 50);
+    overflow: hidden;
+    padding: 120px 0 120px 0;
+}
+.margines{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+#naszezdj{
+    display: block;
+    float: right;
+    width:50%;
+}
+#naszezdj img{
+    width: 100%;
+    border-radius: 60%;
+    padding: 10px;
+    -webkit-box-shadow: 21px 7px 53px 14px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 21px 7px 53px 14px rgba(66, 68, 90, 1);
+    box-shadow: 21px 7px 53px 14px rgba(66, 68, 90, 1);
+
+}
+#onas{
+    display: block;
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+.button a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(32, 36, 33);
+    color: antiquewhite;
+    opacity: 1;
+   transition: ease-in-out 0.3s;
+   display: block;
+    padding: 20px;
+    border-radius: 15px;
+}
+.button a:hover{
+    opacity: 0.5;
+    transition: ease-in-out 0.3s;
+}
+.button{
+    display: block;
+    width:200px;
+}
+#zajawka span{
+    font-weight: bold;
+    font-size: 2.3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgb(192, 189, 195);
+    margin: 30px;
+}
+
+#zajawka p:first-letter {
+    font-family: 'Ballet', sans-serif;
+    font-size:  30px;
+    display: block;
+    float: left;
+    line-height: 1em;
+    margin-right: 25px;
+}
+.aktualnosc img{
+width:30%;
+float: right;
+border-radius: 50px;
+margin-left: 20px;
+}
+.aktualnosc{
+    background-color: rgb(88, 88, 88);
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+}
+.aktualnosc p{
+    padding: 40px;
+    font-size: 1.5em;
+}
+.aktualnosc h2{
+    padding-left: 20px;
+    font-size: 2em;
+}
+h1{
+    font-size: 3em;
+}
+#footer #left, #footer #right{
+    display: block;
+    float: left;
+    width: 50%;
+
+}
+footer{
+    display:block;
+    clear: both;
+}
+#footer #left #adres{
+    font-size: 1.2em;
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+#footer{
+    margin-top: 30px;
+}
+#formularz label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+#submit{
+    padding-left: 100px;
+}
+
+#formularz div{
+    margin-top: 1em;		
+}
+    
+#formularz div input{
+    width: 170px;
+}
+
+textarea{
+    vertical-align: top;
+    height: 5em;
+    width: 170px;		
+}
+
+input.invalid, textarea.invalid{
+    border: 3px solid red;
+}
+ 
+input.valid, textarea.valid{
+    border: 3px solid green;
+}
+
+.blad {
+    color: red;	
+}
+
+.ok {
+    color: green;	
+}
+.podstrona{
+    margin-top: 80px;
+}
+.kadra{
+    display: block;
+    border: 3px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: 21px 7px 53px 14px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 21px 7px 53px 14px rgba(66, 68, 90, 1);
+    box-shadow: 21px 7px 53px 14px rgba(66, 68, 90, 1);
+    width: 80%;
+    min-height: 300px;
+    overflow: hidden;
+    margin: 70px 100px 70px 70px;
+    padding: 30px;
+    background-color:rgb(208, 212, 224);
+
+
+}
+@media all and (max-height:600px)
+{
+.kadra{
+    background-color:rgb(112, 111, 111);
+}
+}
+.kadra img{
+    float: right;
+    width: 300px;
+    border: 5px solid white;
+    border-radius: 40%;
+}
+.kadra h2{
+    text-align: center;
+}
+.kadra p{
+    float: left;
+    padding: 30px;
+    display: block;
+    width:500px;
+    height: auto;
+    color: rgb(0, 0, 0);
+}
+.onasspan{
+    float: left;
+    margin: 45px 45px 90px 45px;
+}
+table.darkTable {
+    font-family: Verdana, Geneva, sans-serif;
+    border: 2px solid #000000;
+    background-color: #4A4A4A;
+    width: 80%;
+    height: 450px;
+    text-align: center;
+    border-collapse: collapse;
+    margin:50px 150px 50px 150px;
+    padding: 40px;
+    overflow: hidden;
+  }
+  table.darkTable td, table.darkTable th {
+    border: 1px solid #4A4A4A;
+    padding: 3px 2px;
+  }
+  table.darkTable tbody td {
+    font-size: 13px;
+    color: #E6E6E6;
+  }
+  table.darkTable tr:nth-child(even) {
+    background: #747474;
+  }
+  table.darkTable thead {
+    background: #000000;
+    border-bottom: 3px solid #000000;
+  }
+  table.darkTable thead th {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E6E6E6;
+    text-align: center;
+    border-left: 0px solid #4A4A4A;
+  }
+  table.darkTable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.darkTable tfoot {
+    font-size: 11px;
+    font-weight: bold;
+    color: #E6E6E6;
+    background: #000000;
+    border-top: 1px solid #4A4A4A;
+  }
+  table.darkTable tfoot td {
+    font-size: 11px;
+  }
+  .course{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 500px;
+    margin: 30px;
+    margin-bottom:-70px;
+  }
+#kurs{
+    width: 150px;
+    height: 150px;
+    padding:70px;
+    float: left;
+    animation-name: first;
+    animation-duration: 6s;
+    border: 1px solid grey;
+    border-radius: 40%;
+    box-shadow: 9px 4px 41px -6px rgb(226, 226, 226);
+    float: right;
+    margin: 40px 100px -100px -40px;
+  }
+#kurss{
+    width: 150px;
+    height: 150px;
+    padding:70px;
+    border: 1px solid grey;
+    border-radius: 40%;
+    box-shadow: 9px 4px 41px -6px rgb(226, 226, 226);   
+    float:left;
+    margin: 40px -40px -100px 100px;
+  }
+#kursss{
+    width: 150px;
+    height: 150px;
+    padding:70px;
+    border: 1px solid grey;
+    border-radius: 40%;
+    box-shadow: 9px 4px 41px -6px rgb(226, 226, 226);
+    float:left;
+    margin: 40px -40px -200px 100px;
+  }
+#kurssss{
+    width: 150px;
+    height: 150px;
+    padding:70px;
+    border: 1px solid grey;
+    border-radius: 40%;
+    box-shadow: 9px 4px 41px -6px rgb(226, 226, 226);
+    float: right;
+    margin: 40px 100px -200px -40px;
+  }
+  #kurstabela{
+    list-style: square inside;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    letter-spacing: 6px;
+    height: 280px;
+    border: 17px ridge #000000;
+    padding: 60px;
+    margin-top:-50px;
+    background-image:url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    overflow:auto;
+  }
+  .kolejnezdjecia{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 500px;
+    margin: 30px;
+    margin-bottom:10px;
+    border-bottom: 6px solid black;
+  }
+  .kontaktuj{
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 400px;
+    margin: 60px;
+    overflow: hidden;
+    animation-name: kontakt;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes kontakt {
+    0%   {left:0px; top:0px;}
+    50%  {left:300px; top:0px;}
+    100%   {left:0px; top:0px;}
+  }
+  .kontaktuj img{
+    border: 10px solid black;
+    border-radius: 40%;
+    border-style: ridge;
+    width: 400px;
+    height: 370px;
+    float: right;
+    opacity: 0.5;
+  }
+#dane{
+    width: 40%;
+    height: 450px;
+    border: 10px solid black;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top:100px;
+    left:60px;
+    margin: 60px;
+    border-radius: 10%;
+    border-style: inset;
+    text-align: center;
+    z-index: auto;
+}
+#koniec{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid black;
+}
+#kurstabela li{
+    font-size: larger;
+    font-weight: 400;
+    font-style: italic;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+}
