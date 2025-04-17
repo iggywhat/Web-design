@@ -1,2 +1,2 @@
 # Web-design
-Project with HTML, CSS and JavaScript
+Projects with HTML, CSS and JavaScript
